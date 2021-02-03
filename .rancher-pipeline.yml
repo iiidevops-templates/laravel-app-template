@@ -1,0 +1,15 @@
+stages:
+  - name: Publish laravel image
+    steps:
+    - publishImageConfig:
+        dockerfilePath: ./Dockerfile 
+        buildContext: .
+        tag: ${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
+      env:
+        PLUGIN_MTU: 1000
+  - name: deploy ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH} environment
+    steps:
+    - applyYamlConfig:
+        path: ./k8s-yaml/laravel-deployment.yaml
+    - applyYamlConfig:
+        path: ./k8s-yaml/laravel-service.yaml
