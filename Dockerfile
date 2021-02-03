@@ -86,7 +86,7 @@ RUN apk del -f .build-deps
 WORKDIR /var/www
 
 # create laravel latest version project
-COPY src /var/www
+COPY app /var/www
 RUN composer install
 RUN cp .env.example .env
 RUN php artisan key:generate
