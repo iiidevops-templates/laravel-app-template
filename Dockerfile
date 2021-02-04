@@ -6,6 +6,20 @@ COPY ./app/apt-package.txt /opt/
 RUN cd /opt/ && apt-get update && \
     cat apt-package.txt | xargs apt-get install -y
 
+#------ 預計之後拿掉
+# Install composer
+ENV COMPOSER_HOME /composer
+ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
+ENV COMPOSER_ALLOW_SUPERUSER 1
+RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
+
+# Install PHP_CodeSniffer
+RUN composer global require "squizlabs/php_codesniffer=*"
+
+# Cleanup dev dependencies
+RUN apk del -f .build-deps
+#------
+
 # Setup working directory
 WORKDIR /var/www
 
