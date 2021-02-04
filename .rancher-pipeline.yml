@@ -18,10 +18,6 @@ stages:
         include:
         - master
         - develop
-  - when:
-      branch:
-        include:
-        - checkmarx
 - name: Deploy app-web
   steps:
   - applyAppConfig:
