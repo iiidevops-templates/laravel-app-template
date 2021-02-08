@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
+      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_BRANCH}:latest
       pushRemote: true
       registry: harbor-demo.iiidevops.org
     env:
