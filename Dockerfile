@@ -1,7 +1,6 @@
 FROM iiiorg/laravel8-php7.4:1.0
 
-<<<<<<< HEAD
-=======
+
 # 將使用者需要安裝的清單放到opt資料夾內
 COPY ./app/apt-package.txt /opt/
 # 為了避免發生測試時的下載封鎖 因此先禁用
@@ -10,7 +9,6 @@ COPY ./app/apt-package.txt /opt/
 RUN cd /opt/ && \
     cat apt-package.txt | xargs apk add
 
->>>>>>> bdc1bdef2593e92494a6ef8a4dfdfe2aca9ce471
 # Setup working directory
 WORKDIR /var/www
 
