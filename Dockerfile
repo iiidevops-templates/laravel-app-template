@@ -1,4 +1,4 @@
-FROM iiiorg/laravel8-php7.4:1.0
+FROM dockerhub/iiiorg/laravel8-php7.4:1.0
 
 
 # 將使用者需要安裝的清單放到opt資料夾內
