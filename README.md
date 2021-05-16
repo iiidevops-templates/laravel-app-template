@@ -1,4 +1,4 @@
-# 簡易laravel框架的網頁
+# 簡易 Laravel 8 框架網頁範例
 
 ## 專案資料夾與檔案格式說明
 檔案可按照需求做修改，`postman_collection_local.json`是要快速部屬時進行Postman collection測試的的檔案，測試結果會自動產生`newman-report.xml`。`openapi_local.yaml`主要是透過owasp ZAP來進行安全掃描，測試報告會自動產生`owasp-report.md`，內包含詳細的掃描內容與建議。  
