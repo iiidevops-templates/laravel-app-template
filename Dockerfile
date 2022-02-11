@@ -1,14 +1,7 @@
-#FROM dockerhub/iiiorg/laravel8-php7.4:1.0
 FROM dockerhub/bitnami/laravel:8-debian-10
-
 
 # 將使用者需要安裝的清單放到opt資料夾內
 COPY ./apt-package.txt /opt/
-# 為了避免發生測試時的下載封鎖 因此先禁用
-#RUN cd /opt/ && apt-get update && \
-#    cat apt-package.txt | xargs apt-get install -y
-#RUN cd /opt/ && \
-#    cat apt-package.txt | xargs apk add
 RUN cd /opt/ && \
     cat apt-package.txt | xargs apt install -y
 
