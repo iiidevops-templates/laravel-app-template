@@ -1,4 +1,5 @@
-FROM dockerhub/iiiorg/laravel8-php7.4:1.0
+#FROM dockerhub/iiiorg/laravel8-php7.4:1.0
+FROM dockerhub/bitnami/laravel:8-debian-10
 
 
 # 將使用者需要安裝的清單放到opt資料夾內
