@@ -1,6 +1,6 @@
 {
   "name": "PHP-Laravel",
-  "description": "laravel 8 / php 8.1.2 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/php-laravel-app-template/blob/master/README.md' target='_blank'>simple web 範本說明</a><hr /><ul>  <li><strong>v1.19</strong>:增加自動計算原始碼行數功能</li>  <li><strong>v1.18</strong>:調整 Web DB chart 支援掛載 NFS Volume 參數</li>  <li><strong>v1.17</strong>:增加掃描 docker Image 功能, Web chart 支援掛載 Volume</li></ul>",
+  "description": "laravel 8 / php 8.1.2 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/php-laravel-app-template/blob/master/README.md' target='_blank'>simple web 範本說明</a><hr /><ul>  <li><strong>v1.20</strong>:整合 rancher-cli 與 deployment-wait 至 iiidevops-cli</li>  <li><strong>v1.19</strong>:增加自動計算原始碼行數功能</li>  <li><strong>v1.18</strong>:調整 Web DB chart 支援掛載 NFS Volume 參數</li></ul>",
   "arguments": [
   ]
 }
